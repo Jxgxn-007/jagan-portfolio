@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0a1026"/>
+      <stop offset="100%" stop-color="#020308"/>
+    </linearGradient>
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2ff"/>
+      <stop offset="100%" stop-color="#7000ff"/>
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="500" fill="url(#cyberBg)"/>
+
+  <!-- Grid overlay -->
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 242, 255, 0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="700" height="500" fill="url(#grid)"/>
+
+  <!-- Central Glow -->
+  <circle cx="350" cy="230" r="140" fill="rgba(112, 0, 255, 0.12)" filter="url(#cyanGlow)"/>
+  <circle cx="350" cy="230" r="80" fill="rgba(0, 242, 255, 0.08)"/>
+
+  <!-- Terminal Window Mockup -->
+  <rect x="80" y="60" width="540" height="360" rx="12" fill="rgba(12, 16, 32, 0.75)" stroke="rgba(0, 242, 255, 0.25)" stroke-width="1.5"/>
+  <rect x="80" y="60" width="540" height="38" rx="12" fill="rgba(255, 255, 255, 0.03)"/>
+  <circle cx="106" cy="79" r="5" fill="#ff5f56"/>
+  <circle cx="124" cy="79" r="5" fill="#ffbd2e"/>
+  <circle cx="142" cy="79" r="5" fill="#27c93f"/>
+
+  <!-- Title & Subtitle inside Window -->
+  <text x="350" y="83" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="1">axiscyberlab-nine.vercel.app</text>
+
+  <!-- Main Cyber Lab Icon -->
+  <g transform="translate(350, 180)">
+    <!-- Hexagon -->
+    <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="none" stroke="url(#cyanPurple)" stroke-width="2.5" filter="url(#cyanGlow)"/>
+    <!-- Terminal prompt symbol -->
+    <path d="M -15,-10 L -5,0 L -15,10" fill="none" stroke="#00f2ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="0" y1="10" x2="14" y2="10" stroke="#7000ff" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="350" y="270" font-family="'Outfit', -apple-system, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">Axis Cyber Labs</text>
+  <text x="350" y="300" font-family="'Inter', -apple-system, sans-serif" font-size="13" fill="#00f2ff" text-anchor="middle" letter-spacing="1.5">CYBERSECURITY &amp; DEVOPS EDUCATION</text>
+  <text x="350" y="330" font-family="'Inter', -apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)" text-anchor="middle">React &bull; Vite &bull; Interactive Learning &bull; Active Development</text>
+
+  <!-- Badge Pill -->
+  <rect x="260" y="360" width="180" height="28" rx="14" fill="rgba(0, 242, 255, 0.1)" stroke="rgba(0, 242, 255, 0.3)" stroke-width="1"/>
+  <circle cx="278" cy="374" r="4" fill="#00f2ff"/>
+  <text x="354" y="378" font-family="'Inter', -apple-system, sans-serif" font-size="11" fill="#00f2ff" text-anchor="middle" font-weight="600" letter-spacing="0.5">FRONTEND LIVE</text>
+</svg>
